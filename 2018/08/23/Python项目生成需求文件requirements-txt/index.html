@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://vivid43.github.io">
   <title>Python项目生成需求文件requirements.txt | Zhao Wei&#39; Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="requirements.txt一起开发项目的时候总是要搭建环境和部署环境的，这个时候必须得有个python第三方包的list，一般都叫做requirements.txt。   如果一个项目使用时virtualenv环境，用 pip freeze 就可以解决 一个项目的依赖list没有维护，而且又是环境混用，用工具 pipreqs，可以自动根据源码生成 requirements.txt .  pi">
+  <meta name="description" content="requirements.txt一起开发项目的时候总是要搭建环境和部署环境的，这个时候必须得有个python第三方包的list，一般都叫做requirements.txt。   如果一个项目使用时virtualenv环境，用 pip freeze 就可以解决 一个项目的依赖list没有维护，而且又是环境混用，用工具 pipreqs，可以自动根据源码生成 requirements.txt .">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python项目生成需求文件requirements.txt">
 <meta property="og:url" content="https://vivid43.github.io/2018/08/23/Python项目生成需求文件requirements-txt/index.html">
 <meta property="og:site_name" content="Zhao Wei&#39; Blog">
-<meta property="og:description" content="requirements.txt一起开发项目的时候总是要搭建环境和部署环境的，这个时候必须得有个python第三方包的list，一般都叫做requirements.txt。   如果一个项目使用时virtualenv环境，用 pip freeze 就可以解决 一个项目的依赖list没有维护，而且又是环境混用，用工具 pipreqs，可以自动根据源码生成 requirements.txt .  pi">
+<meta property="og:description" content="requirements.txt一起开发项目的时候总是要搭建环境和部署环境的，这个时候必须得有个python第三方包的list，一般都叫做requirements.txt。   如果一个项目使用时virtualenv环境，用 pip freeze 就可以解决 一个项目的依赖list没有维护，而且又是环境混用，用工具 pipreqs，可以自动根据源码生成 requirements.txt .">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-20T07:04:31.000Z">
+<meta property="og:updated_time" content="2018-09-20T07:21:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python项目生成需求文件requirements.txt">
-<meta name="twitter:description" content="requirements.txt一起开发项目的时候总是要搭建环境和部署环境的，这个时候必须得有个python第三方包的list，一般都叫做requirements.txt。   如果一个项目使用时virtualenv环境，用 pip freeze 就可以解决 一个项目的依赖list没有维护，而且又是环境混用，用工具 pipreqs，可以自动根据源码生成 requirements.txt .  pi">
+<meta name="twitter:description" content="requirements.txt一起开发项目的时候总是要搭建环境和部署环境的，这个时候必须得有个python第三方包的list，一般都叫做requirements.txt。   如果一个项目使用时virtualenv环境，用 pip freeze 就可以解决 一个项目的依赖list没有维护，而且又是环境混用，用工具 pipreqs，可以自动根据源码生成 requirements.txt .">
   
     <link rel="alternative" href="/atom.xml" title="Zhao Wei&#39; Blog" type="application/atom+xml">
   
@@ -182,9 +182,9 @@
         <h1 id="requirements-txt"><a href="#requirements-txt" class="headerlink" title="requirements.txt"></a>requirements.txt</h1><p>一起开发项目的时候总是要搭建环境和部署环境的，这个时候必须得有个python第三方包的list，一般都叫做requirements.txt。 </p>
 <ul>
 <li>如果一个项目使用时virtualenv环境，用 pip freeze 就可以解决</li>
-<li>一个项目的依赖list没有维护，而且又是环境混用，用工具 pipreqs，可以自动根据源码生成 requirements.txt .</li>
+<li>一个项目的依赖list没有维护，而且又是环境混用，用工具 pipreqs，可以自动根据源码生成 requirements.txt .<a id="more"></a>
+<h1 id="pip-freeze的使用"><a href="#pip-freeze的使用" class="headerlink" title="pip freeze的使用"></a>pip freeze的使用</h1>这种方式需要配合virtualenv ，否则把整个环境中的包都列出来了。</li>
 </ul>
-<h1 id="pip-freeze的使用"><a href="#pip-freeze的使用" class="headerlink" title="pip freeze的使用"></a>pip freeze的使用</h1><p>这种方式需要配合virtualenv ，否则把整个环境中的包都列出来了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip freeze &gt; requirements.txt	<span class="comment">#生成requirements.txt</span></span><br></pre></td></tr></table></figure>
 <h1 id="pipreqs的使用"><a href="#pipreqs的使用" class="headerlink" title="pipreqs的使用"></a>pipreqs的使用</h1><p>通过对项目目录的扫描，自动发现使用了那些类库，自动生成依赖清单。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ pip install pipreqs	<span class="comment">#安装pipreqs</span></span><br><span class="line">$ pipreqs ./	<span class="comment">#生成requirements.txt</span></span><br></pre></td></tr></table></figure>
